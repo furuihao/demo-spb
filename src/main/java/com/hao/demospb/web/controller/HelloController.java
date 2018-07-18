@@ -14,6 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @RequestMapping("/say")
     public String hello(){
-        return "hello kkk";
+        return "hello,大家好!";
     }
 }

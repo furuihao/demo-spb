@@ -1,5 +1,7 @@
 package com.hao.demospb.web.controller;
 
+import org.springframework.http.RequestEntity;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,11 +32,14 @@ public class LoginController {
         String host = null;
         try {
             host = InetAddress.getLocalHost().getHostAddress();
+            InetAddress.getLocalHost();
+
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
 //        System.out.println("主机IP："+host);
-
-        return "主机IP："+host+",sessionId:"+sessionId;
+        ResponseEntity d;
+        RequestEntity a;
+        return "主机IP：" + host+":"+request.getLocalPort() + ",sessionId:" + sessionId;
     }
 }

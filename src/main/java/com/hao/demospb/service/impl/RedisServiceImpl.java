@@ -19,4 +19,9 @@ public class RedisServiceImpl implements RedisService {
     public void set(String key, String value) {
         stringRedisTemplate.opsForValue().set(key, value);
     }
+
+    @Override
+    public String get(String key) {
+        return stringRedisTemplate.opsForValue().get(key);
+    }
 }

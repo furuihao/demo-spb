@@ -41,4 +41,10 @@ public class RedisServiceImplTest {
     }
 
 
+    @Test
+    public void testGet() throws Exception {
+        String str = redisService.get("name");
+        System.out.println("testGet:" + str);
+    }
+
 } 

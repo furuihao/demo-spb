@@ -1,6 +1,6 @@
 server:
-   port: 8090
-   context-path=: /demo-spb
+   port: 8091
+   context-path: /demo-spb
 spring:
   application:
     name: demo-spb
@@ -15,9 +15,13 @@ spring:
       max-idle: 8
       max-wait: -1
       min-idle: 0
-    sentinel:
-      master: mymaster
-      nodes: 192.168.168.137:26379,192.168.168.137:26380
+#    sentinel:
+#      master: mymaster
+#      nodes: 192.168.168.137:26379,192.168.168.137:26380
+    cluster:
+      nodes: 192.168.168.137:7001,192.168.168.137:7002 ,192.168.168.137:7003,  192.168.168.137:7004,  192.168.168.137:7005 ,192.168.168.137:7006
+
+
 
 
 #spring.redis.host=192.168.168.137
